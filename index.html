@@ -396,6 +396,24 @@
       color: var(--muted);
     }
 
+    .card dl {
+      display: grid;
+      gap: 14px;
+      margin: 0;
+    }
+
+    .card dt {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.43;
+      letter-spacing: 0;
+    }
+
+    .card dd {
+      margin: 4px 0 0;
+      color: inherit;
+    }
+
     .dark .card,
     .dark-2 .card {
       border-color: rgba(255, 255, 255, 0.12);
@@ -404,7 +422,9 @@
     }
 
     .dark .card p,
-    .dark-2 .card p {
+    .dark-2 .card p,
+    .dark .card dt,
+    .dark-2 .card dt {
       color: var(--muted-dark);
     }
 
@@ -611,15 +631,17 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#home">Skip to main content</a>
 
   <header class="site-header">
     <div class="global-nav">
       <nav class="global-nav-inner" aria-label="Main navigation">
-        <a class="brand" href="#">Hyunjin Lim</a>
+        <a class="brand" href="#home">Hyunjin Lim</a>
         <div class="nav-links">
           <a href="#about">About</a>
           <a href="#projects">Projects</a>
+          <a href="#courses">Courses</a>
+          <a href="#ai-usage">AI Usage</a>
           <a href="#experience">Experience</a>
           <a href="#cv">CV</a>
           <a href="#contact">Contact</a>
@@ -628,18 +650,19 @@
     </div>
     <div class="sub-nav">
       <div class="sub-nav-inner">
-        <a class="sub-title" href="#">Portfolio</a>
+        <a class="sub-title" href="#home">Portfolio</a>
         <div class="sub-actions">
           <a href="#projects">Work</a>
+          <a href="#courses">Courses</a>
           <a href="#experience">Timeline</a>
-          <a class="nav-pill" href="assets/cv.pdf">CV</a>
+          <a class="nav-pill" href="#cv">CV</a>
         </div>
       </div>
     </div>
   </header>
 
-  <main id="main">
-    <section class="tile light hero" aria-labelledby="hero-title">
+  <main>
+    <section class="tile light hero" id="home" aria-labelledby="hero-title">
       <div class="hero-inner">
         <div class="hero-copy">
           <p class="eyebrow">Personal Website</p>
@@ -706,7 +729,38 @@
       </div>
     </section>
 
-    <section class="tile light" id="experience" aria-labelledby="experience-title">
+    <section class="tile light" id="courses" aria-labelledby="courses-title">
+      <div class="content">
+        <div class="section-head">
+          <h2 id="courses-title">Courses I Plan to Take</h2>
+          <p>Foundational mathematics and computing courses I plan to study next.</p>
+        </div>
+        <div class="grid">
+          <article class="card">
+            <h3>Mathematical Analysis</h3>
+            <p>Rigorous foundations for limits, continuity, differentiation, and integration.</p>
+          </article>
+          <article class="card">
+            <h3>Computer Programming</h3>
+            <p>Core programming concepts, problem solving, and implementation practice.</p>
+          </article>
+          <article class="card">
+            <h3>Data Structure</h3>
+            <p>Organizing data for efficient algorithms, systems, and software design.</p>
+          </article>
+          <article class="card">
+            <h3>Logic Design</h3>
+            <p>Digital logic, circuits, and the hardware foundations behind computation.</p>
+          </article>
+          <article class="card">
+            <h3>Probability and Statistics</h3>
+            <p>Quantitative reasoning for uncertainty, data, and machine learning.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="tile parchment" id="experience" aria-labelledby="experience-title">
       <div class="content">
         <div class="section-head">
           <h2 id="experience-title">Experience</h2>
@@ -740,6 +794,27 @@
           </div>
           <a class="button" href="assets/cv.pdf">Open Resume PDF</a>
         </div>
+      </div>
+    </section>
+
+    <section class="tile light" id="ai-usage" aria-labelledby="ai-usage-title">
+      <div class="content">
+        <div class="section-head">
+          <h2 id="ai-usage-title">AI Usage</h2>
+          <p>Disclosure of the AI tool and prompt used while building this site.</p>
+        </div>
+        <article class="card">
+          <dl>
+            <div>
+              <dt>Tool</dt>
+              <dd>Codex</dd>
+            </div>
+            <div>
+              <dt>Prompt</dt>
+              <dd>Build a static personal website in the repo root. Keep the site simple and compatible with GitHub Pages. Make the page responsive and accessible.</dd>
+            </div>
+          </dl>
+        </article>
       </div>
     </section>
 
