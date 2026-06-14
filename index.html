@@ -344,8 +344,11 @@
     }
 
     .hero-visual img {
-      width: min(760px, 100%);
+      width: min(420px, 100%);
+      aspect-ratio: 1 / 1;
       margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
       filter: drop-shadow(var(--product-shadow));
     }
 
@@ -649,8 +652,8 @@
             <a class="button secondary" href="assets/cv.pdf">Open CV PDF</a>
           </div>
         </div>
-        <figure class="hero-visual" aria-label="Portfolio workspace product render">
-          <img src="assets/portfolio-hero.png" alt="A clean laptop and resume sheet arranged on a white studio surface.">
+        <figure class="hero-visual" aria-label="Profile photo">
+          <img src="assets/profile.jpg" alt="Portrait of Hyunjin Lim.">
         </figure>
       </div>
     </section>
